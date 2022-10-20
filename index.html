@@ -11,26 +11,22 @@
 
 <body>
 
-    <header>
-        <div class="container-logo">
-        <a class="logo" href="index.html">
-            <img src="./assets/img/logo-padel.png" 
-            alt="logo padel"/>
-        </a>
-        </div>
-    </header>
-
     <main>
 
-        <div class="foto-container">
-            <div class="foto">
-                <img src="./assets/img/wpt-padel.jpg" alt="">
-            </div>
-        </div> 
-
-        <h1>Torneo de Padel #1 - #2 - #3 Divicion</h1>
-
         <section class="formulario">
+
+            <div class="logo-text">
+
+            <img class="foto-logo" src="assets/img/logo-padel.png" alt="">
+    
+            <h1>Inscríbete a nuestro torneo de pádel</h1>
+
+            </div>
+
+            <h2>Primera - Segunda - Tercera División</h2>
+
+            <h3>Llena el formulario con tu nombre y el de tu partner  además de la división en la que quieras jugar</h3>
+
             <form>
                 <label for="nombre-tarea">Jugador 1</label>
                 <input type="text" name="nombre" id="nombre-tarea">
@@ -38,7 +34,7 @@
                 <input type="text" name="responsable" id="responsable">
                 <label for="descripcion">Categoria</label>
                 <select type="text" name="descripcion" id="descripcion">
-                    <option>Preimera Divicion</option>
+                    <option>Primera Divicion</option>
                     <option>Segunda Divicion</option>
                     <option>Tercera Divicion</option>
                 </select>
@@ -46,10 +42,25 @@
                 <button id="actualizar">Actualizar</button>
             </form>
         </section>
-        <section id="tareas">
-        </section>
+
+        <div class="foto-container">
+            <div class="foto-jugador">
+                <img src="assets/img/jugador-padel.png" alt="">
+            </div>
+        </div>  
 
     </main>
+
+    <div class="text-container">
+        <div class="text">
+            <h1>Inscripciones</h1>
+        </div>
+    </div>
+
+    <div class="crud">
+        <section id="tareas">
+        </section>
+    </div>
 
     <script src="./assets/js/CRUD.js"></script>
 </body>

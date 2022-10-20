@@ -16,19 +16,15 @@ function agregarTarea(e) {
   e.preventDefault()
 
   const tarea = {
-    nombre: nombre.value, //este elemento es único
+    nombre: nombre.value, 
     responsable: responsable.value,
     descripcion: descripcion.value
   }
 
-  // if (tarea que estoy creando ya existe en el array o algun input está vacío) {
-  //     mostrar un error
-  // }else {
   tareas.push(tarea)
   guardarEnLS()
   mostrarTareas()
   limpiarInput()
-  // }
 }
 
 function limpiarInput() {
@@ -58,12 +54,6 @@ function eliminarTarea(boton, nombre) {
 function leerTareas() {
   let tareasEnLS = window.localStorage.getItem('tareas')
 
-  //   if (tareasEnLS === null) {
-  //     tareas = []
-  //   } else {
-  //     tareas = JSON.parse(tareasEnLS)
-  //     }
-
   tareas = JSON.parse(tareasEnLS) || []
   mostrarTareas()
 }
@@ -73,14 +63,14 @@ function mostrarTareas() {
   tareas.forEach((tarea) => {
     contenedor.innerHTML += `
             <article>
-                <div>
+                <div class="text-crud">
                     <p>${tarea.nombre}</p>
                     <p>${tarea.responsable}</p>
                     <p>${tarea.descripcion}</p>
                 </div>
                 <div>
-                    <button onclick="editarTarea(this, '${tarea.nombre}' )">Editar</button>
-                    <button onclick="eliminarTarea(this, '${tarea.nombre}' )">Borrar</button>
+                    <button class="button-crud" onclick="editarTarea(this, '${tarea.nombre}' )">Editar</button>
+                    <button class="button-crud" onclick="eliminarTarea(this, '${tarea.nombre}' )">Borrar</button>
                 </div>
             </article>
       `
@@ -94,12 +84,10 @@ function guardarEnLS() {
 
 function actualizarTarea(evento) {
   evento.preventDefault()
-  // leer los datos del input
   let nombreTarea = nombre.value
   let nuevoResponsable = responsable.value
   let nuevaDescripcion = descripcion.value
 
-  // editar el obtejo dentro del array que tenga el identificar
   tareas = tareas.map((tarea) => {
     if (tarea.nombre === nombreTarea) {
       return {
@@ -112,18 +100,12 @@ function actualizarTarea(evento) {
     }
   })
 
-  // limpiar los input
   limpiarInput()
 
-  // vuelve a aparecer boton agregar
   botonAgregar.style.display = 'block'
-  // vuelva a desaparecer el boton actualizar
   botonActualizar.style.display = 'none'
-  // vuelve a quedar activo el input
   nombre.removeAttribute('disabled')
-  // actualizo el LS
   guardarEnLS()
-  // actualizar la tabla
   mostrarTareas()
 }
 
