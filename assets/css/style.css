@@ -13,7 +13,7 @@ a.logo {
 }
 
 a img {
-    width: 18%;
+    width: 10%;
 }
 
 /* MAIN IMG */
@@ -28,8 +28,8 @@ main img {
 
 form{
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    /* flex-direction: column; */
+    /* width: 50%; */
 }
 
 main{
