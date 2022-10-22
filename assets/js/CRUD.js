@@ -68,7 +68,7 @@ function mostrarTareas() {
                     <p>${tarea.responsable}</p>
                     <p>${tarea.descripcion}</p>
                 </div>
-                <div>
+                <div class="button-container">
                     <button class="button-crud" onclick="editarTarea(this, '${tarea.nombre}' )">Editar</button>
                     <button class="button-crud" onclick="eliminarTarea(this, '${tarea.nombre}' )">Borrar</button>
                 </div>
