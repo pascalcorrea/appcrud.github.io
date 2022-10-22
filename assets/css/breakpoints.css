@@ -9,10 +9,6 @@
         display: none;
     }
 
-    h1 {
-        margin: 20px;
-    }
-
     button.button-crud {
         width: 60px;
         height: 40px;
@@ -41,3 +37,13 @@
     }
 
 }
+
+@media screen and (max-width:900px){
+  
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+  }
