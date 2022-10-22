@@ -5,6 +5,26 @@
     font-family: 'Trebuchet MS';
 }
 
+/* HEADER */
+
+.container-logo {   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-color: midnightblue;
+}
+
+a.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
 /* MIAN */
 
 main{
@@ -30,16 +50,12 @@ div.logo-text {
 
 img.foto-logo {
     width: 100px;
-    margin-top: 40px;
 }
 
 h1.titulo {
-    margin-top: 40px;
-    margin-right: 20px;
+    margin: 20px;
     color: white;
     font-size: 40px;
-    display: flex;
-    align-items: center;
 }
 
 h2 {
@@ -139,4 +155,72 @@ p{
 
 #actualizar{
     display: none;
+}
+
+/* FOOTER */
+
+.pie-pagina{
+    width: 100%;
+    background-color: midnightblue;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina div.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: white;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: white;
+}
+.pie-pagina .grupo-2{
+    background-color: white;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
 }
