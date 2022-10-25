@@ -95,6 +95,10 @@ button#agregar {
     height: 40px;
 }
 
+div.foto-jugador {
+    width: 100%;
+}
+
 /* CRUD */
 
 button.button-crud {
